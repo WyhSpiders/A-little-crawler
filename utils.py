@@ -32,6 +32,7 @@ def get_proxy():
         if response.status_code == 200:
             proxy = response.text
             proxies = {'https': 'https://' + proxy}
+			return proxies
     except ConnectionError:
         return None
 
